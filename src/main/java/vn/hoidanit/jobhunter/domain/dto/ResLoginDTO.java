@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ResLoginDTO {
 
-    @JsonProperty("token")
+    @JsonProperty("access_token")
     private String accessToken;
 
     public String getAccessToken() {
