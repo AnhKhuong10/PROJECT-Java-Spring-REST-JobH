@@ -49,6 +49,8 @@ public class SecurityConfiguration {
                         authz -> authz
                                 .requestMatchers("/", "/api/v1/login").permitAll()
                                 .anyRequest().authenticated())
+                // .authorizeHttpRequests(authz -> authz.anyRequest().permitAll()) // Tắt
+                // security
                 .oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults())
                         .authenticationEntryPoint(customAuthenticationEntryPoint))
                 // .exceptionHandling(
